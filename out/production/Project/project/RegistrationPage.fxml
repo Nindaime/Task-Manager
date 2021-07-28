@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="815.0" style="-fx-background-color: #ddd;" stylesheets="@Project.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.RegistrationPageController">
+   <children>
+      <VBox alignment="CENTER" layoutX="18.0" layoutY="19.0" spacing="10.0">
+         <children>
+            <ImageView fx:id="userImage" fitHeight="192.0" fitWidth="213.0" layoutX="19.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/placeholder-user-photo1.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#666666" height="10.0" radius="4.5" spread="1.0" width="10.0" />
+               </effect>
+            </ImageView>
+            <Button id="upload" layoutX="57.0" layoutY="224.0" mnemonicParsing="false" onAction="#chooseImage" prefHeight="37.0" prefWidth="116.0" text="upload">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="59.0" layoutX="-22.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon_folder_upload.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="220.0" layoutY="57.0" prefHeight="446.0" prefWidth="519.0" spacing="20.0">
+         <children>
+            <AnchorPane prefHeight="126.0" prefWidth="509.0" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="registration_modules">
+               <children>
+                  <TextField fx:id="surname" layoutX="12.0" layoutY="27.0" prefWidth="150.0" promptText="Surname" styleClass="textField" />
+                  <TextField fx:id="firstname" layoutX="177.0" layoutY="27.0" prefWidth="150.0" promptText="Firstname" styleClass="textField" />
+                  <Label layoutX="11.0" layoutY="3.0" prefHeight="23.0" prefWidth="81.0" style="-fx-text-fill: #666;" styleClass="registration_page_label" text="IDENTITY">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" layoutX="94.0" layoutY="70.0" prefWidth="150.0" promptText="Username" styleClass="textField" />
+                  <PasswordField fx:id="password" layoutX="258.0" layoutY="70.0" prefHeight="40.0" prefWidth="150.0" promptText="Password" styleClass="password_field" />
+                  <ImageView fx:id="surnameRequired" fitHeight="8.0" fitWidth="8.0" layoutX="165.0" layoutY="23.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/warning.fw.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="firstnameRequired" fitHeight="8.0" fitWidth="8.0" layoutX="329.0" layoutY="22.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/warning.fw.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="superiorRequired" fitHeight="8.0" fitWidth="8.0" layoutX="493.0" layoutY="22.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/warning.fw.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="usernameRequired" fitHeight="8.0" fitWidth="8.0" layoutX="246.0" layoutY="66.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/warning.fw.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="passwordRequired" fitHeight="8.0" fitWidth="8.0" layoutX="410.0" layoutY="66.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/warning.fw.png" />
+                     </image>
+                  </ImageView>
+                  <ComboBox fx:id="superior" layoutX="341.0" layoutY="27.0" prefHeight="35.0" prefWidth="150.0" promptText="Superior" style="-fx-background-radius: 0; -fx-background-color: #ddd; -fx-border-color: #999;" styleClass="combo_box">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="156.0" prefWidth="509.0" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="registration_modules">
+               <children>
+                  <TextArea fx:id="jobDescription" editable="false" layoutX="14.0" layoutY="66.0" prefHeight="68.0" prefWidth="481.0" promptText="Job Description" styleClass="textarea">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextArea>
+                  <ComboBox fx:id="jobTitle" layoutX="14.0" layoutY="26.0" onAction="#selectJobTitle" prefHeight="40.0" prefWidth="481.0" promptText="Select Your Job Title" style="-fx-background-color: #ddd; -fx-border-color: #999;" styleClass="combo_box">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ComboBox>
+                  <Label layoutX="14.0" layoutY="2.0" prefHeight="23.0" prefWidth="44.0" style="-fx-text-fill: #666;" styleClass="registration_page_label" text="JOB">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="jobTitleRequired" fitHeight="8.0" fitWidth="8.0" layoutX="497.0" layoutY="22.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/warning.fw.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="127.0" prefWidth="509.0" style="-fx-background-color: white; -fx-background-radius: 5;" styleClass="registration_modules">
+               <children>
+                  <TextField fx:id="securityAnswer" layoutX="13.0" layoutY="74.0" prefWidth="234.0" promptText="Security Answer" styleClass="textField" />
+                  <Label layoutX="13.0" layoutY="3.0" prefHeight="23.0" prefWidth="74.0" style="-fx-text-fill: #666;" styleClass="registration_page_label" text="OTHER">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="securityQuestion" editable="true" layoutX="13.0" layoutY="30.0" prefHeight="40.0" prefWidth="481.0" promptText="Select a Security Question" style="-fx-background-color: #ddd; -fx-border-color: #999; -fx-padding: 0;" styleClass="combo_box">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ComboBox>
+                  <ImageView fx:id="securityAnswerRequired" fitHeight="8.0" fitWidth="8.0" layoutX="249.0" layoutY="77.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/warning.fw.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="back" layoutX="19.0" layoutY="508.0" mnemonicParsing="false" onAction="#goToLogin" prefWidth="81.0" styleClass="registration_page_buttons" text="Back">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/back-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="register" layoutX="671.0" layoutY="508.0" mnemonicParsing="false" onAction="#registerUser" onDragOver="#hover" prefWidth="106.0" styleClass="registration_page_buttons" text="Register">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/submit.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button id="no-color" fx:id="closeButton" layoutX="761.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="23.0" prefWidth="17.0">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="753.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/iconsineed-multiply.png" />
+               </image>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="userImageRequired" fitHeight="8.0" fitWidth="8.0" layoutX="212.0" layoutY="15.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/warning.fw.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="message" layoutX="220.0" layoutY="517.0" />
+   </children>
+</AnchorPane>

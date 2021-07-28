@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="250.0" prefWidth="399.0" style="-fx-border-color: #666; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.MovementLogsController">
+   <children>
+      <Pane layoutX="119.0" layoutY="14.0" prefHeight="40.0" prefWidth="409.0" style="-fx-background-color: #666;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="128.0" layoutY="7.0" text="Movement Log" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="23.0" />
+               </font>
+            </Label>
+            <Button id="no-color" fx:id="closeButton" cancelButton="true" layoutX="366.0" mnemonicParsing="false" onAction="#closeButtonAction" onMouseEntered="#hover_in" onMouseExited="#hover_out" prefHeight="23.0" prefWidth="27.0" style="-fx-background-color: transparent;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView id="close-button" fitHeight="26.0" fitWidth="21.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" styleClass="no-margin">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../img/PopupClose.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutY="48.0" prefHeight="70.0" prefWidth="403.0" style="-fx-border-color: #666; -fx-border-insets: 10;">
+         <children>
+            <TextField layoutX="20.0" layoutY="23.0" prefHeight="25.0" prefWidth="363.0" promptText="e.g Home : 32 Herbert Maculay, Yaba" style="-fx-background-radius: 0;" />
+            <Label layoutX="20.0" layoutY="4.0" style="-fx-background-color: white;" text="Where are you going to ?">
+               <font>
+                  <Font name="Arimo" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Pane>
+      <Pane layoutY="109.0" prefHeight="107.0" prefWidth="403.0" style="-fx-border-color: #666; -fx-border-insets: 10;">
+         <children>
+            <TextArea layoutX="20.0" layoutY="22.0" prefHeight="64.0" prefWidth="363.0" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Arimo" size="12.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="24.0" style="-fx-background-color: white;" text="Why are you leaving now ?">
+               <font>
+                  <Font name="Arimo" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Pane>
+      <Button layoutX="317.0" layoutY="212.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="29.0" prefWidth="76.0" style="-fx-background-color: #666; -fx-background-radius: 0;" text="LogOut" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arimo" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

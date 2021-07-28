@@ -1,0 +1,34 @@
+.scroll-pane {
+  -fx-background-color: transparent;
+}
+.scroll-bar:horizontal .thumb{
+    -fx-background-color: transparent;
+}
+
+.address .scroll-bar .increment-button {
+  -fx-visibility: hidden;
+}
+
+.address .scroll-bar .decrement-button {
+  -fx-visibility: hidden;
+}
+
+.address .scroll-bar:horizontal {
+  -fx-background-color: transparent;
+}
+
+
+
+
+.scroll-bar:horizontal *.increment-arrow, .scroll-bar:horizontal *.decrement-arrow{
+  -fx-background-color: transparent;
+  -fx-background: transparent;
+}
+
+.scroll-pane .corner{
+    -fx-background-color: "gainsboro";
+}
+
+.scroll-bar:horizontal .track{
+     -fx-background-color: "gainsboro";
+}

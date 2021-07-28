@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+
+<Label alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="11.0" prefHeight="20.0" prefWidth="68.0" style="-fx-background-color: #08C; -fx-text-fill: #fff;" stylesheets="@MainPage.css" text="MR" textFill="WHITE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <contextMenu>
+        <ContextMenu>
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#startTask" text="Start" />
+                <MenuItem mnemonicParsing="false" onAction="#cancelTask" text="Cancel" />
+                <MenuItem mnemonicParsing="false" onAction="#suspendTask" text="Suspend" />
+                <MenuItem mnemonicParsing="false" onAction="#finishTask" text="Finish" />
+            </items>
+        </ContextMenu>
+    </contextMenu>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</Label>

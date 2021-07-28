@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="212.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.ClockController">
+   <children>
+      <Group layoutX="-106.0" layoutY="-94.0">
+         <children>
+            <Arc fill="DODGERBLUE" layoutX="212.0" layoutY="201.0" length="45.0" radiusX="64.0" radiusY="64.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+            <Circle fill="#268da6" layoutX="212.0" layoutY="200.0" radius="76.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="WHITE" layoutX="212.0" layoutY="200.0" radius="70.0" stroke="WHITE" strokeType="INSIDE">
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" height="65.0" radius="32.0" width="65.0" />
+               </effect>
+            </Circle>
+            <Line fx:id="hour5" endX="5.0" endY="10.0" layoutX="255.0" layoutY="273.0" strokeLineCap="ROUND" strokeWidth="3.0" />
+            <Line fx:id="hour11" endX="-5.0" endY="-10.0" layoutX="171.0" layoutY="126.0" strokeLineCap="ROUND" strokeWidth="3.0" />
+            <Line fx:id="hour8" endX="-10.0" endY="5.0" layoutX="139.0" layoutY="242.0" strokeLineCap="ROUND" strokeWidth="3.0" />
+            <Line fx:id="hour7" endX="-5.0" endY="10.0" layoutX="171.0" layoutY="273.0" strokeLineCap="ROUND" strokeWidth="3.0" />
+            <Line fx:id="hour10" endX="-10.0" endY="-5.0" layoutX="139.0" layoutY="158.0" strokeLineCap="ROUND" strokeWidth="3.0" />
+            <Line fx:id="hour1" endX="10.0" layoutX="253.0" layoutY="122.0" rotate="120.0" strokeLineCap="ROUND" strokeWidth="3.0" />
+            <Line fx:id="hour4" endX="10.0" endY="5.0" layoutX="285.0" layoutY="242.0" strokeLineCap="ROUND" strokeWidth="3.0" />
+            <Line fx:id="hour2" endX="-10.0" endY="5.0" layoutX="295.0" layoutY="153.0" strokeLineCap="ROUND" strokeWidth="3.0" />
+            <Label blendMode="SRC_ATOP" layoutX="209.0" layoutY="278.0" text="6">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label blendMode="SRC_ATOP" layoutX="120.0" layoutY="190.0" text="9">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label blendMode="SRC_ATOP" layoutX="296.0" layoutY="190.0" text="3">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="206.0" layoutY="103.0" text="12">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <HBox layoutX="175.0" layoutY="225.0" prefHeight="15.0" prefWidth="50.0" spacing="5.0" style="-fx-background-color: gainsboro; -fx-background-radius: 4; -fx-border-color: #268DA6; -fx-border-radius: 3; -fx-border-insets: -3; -fx-border-width: 2;">
+               <children>
+                  <ImageView fx:id="hourTens" fitHeight="17.0" fitWidth="13.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="hourUnits" fitHeight="17.0" fitWidth="13.0" layoutX="52.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+                  <Pane fx:id="tickerContainer" prefHeight="17.0" prefWidth="15.0">
+                     <children>
+                        <Text fx:id="ticker" boundsType="VISUAL" fill="#268da6" layoutX="-2.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="8.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="minuteTens" fitHeight="17.0" fitWidth="13.0" layoutX="16.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="minuteUnits" fitHeight="17.0" fitWidth="13.0" layoutX="75.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <effect>
+                  <InnerShadow height="10.0" radius="5.75" width="15.0" />
+               </effect>
+            </HBox>
+            <Line fx:id="minuteHand" endX="-70.0" endY="-70.0" layoutX="282.0" layoutY="200.0" startX="-70.0" stroke="#727272" strokeLineCap="ROUND" strokeWidth="3.0" />
+            <Text fill="#268da6" fontSmoothingType="LCD" layoutX="184.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peeplo">
+               <font>
+                  <Font name="Blackadder ITC" size="24.0" />
+               </font>
+            </Text>
+            <Line fx:id="hourHand" endY="-50.0" layoutX="212.0" layoutY="200.0" stroke="#c3c3c3" strokeLineCap="ROUND" strokeWidth="4.0" />
+            <Line fx:id="secondHand" endY="-90.0" layoutX="212.0" layoutY="200.0" stroke="WHITE" strokeLineCap="ROUND" strokeWidth="2.5">
+               <effect>
+                  <DropShadow />
+               </effect></Line>
+            <Circle fx:id="clockKnob" layoutX="212.0" layoutY="200.0" radius="5.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5190476190476191" radius="1.0">
+                     <stops>
+                        <Stop color="#a1a1a1" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Circle>
+         </children>
+      </Group>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="268.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/clock.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

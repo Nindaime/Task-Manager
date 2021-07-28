@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="BASELINE_RIGHT" prefHeight="46.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.MainPageController">
+    <children>
+        <TextArea fx:id="messageFromSender" prefHeight="46.0" prefWidth="359.0" style="-fx-background-color: gainsboro;" text="Alfred: &#10;When are you going to send me the file" wrapText="true">
+            <padding>
+                <Insets left="20.0" />
+            </padding>
+        </TextArea>
+    </children>
+</HBox>

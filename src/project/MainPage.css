@@ -1,0 +1,13 @@
+.mainFxmlClass{
+}
+.button{ 
+	-fx-pref-height: 50;
+	-fx-background-color: #666;
+}
+.button:hover{
+	-fx-text-fill: #666;
+	-fx-background-color: #DDD;
+}
+.footer{
+	-fx-background-color: #666;
+}

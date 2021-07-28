@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane onMouseEntered="#initializeMessage" prefHeight="250.0" prefWidth="409.0" style="-fx-border-width: 3; -fx-border-color: #666;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.ViewMessagesController">
+   <top>
+      <Pane prefHeight="40.0" prefWidth="377.0" style="-fx-background-color: #666;">
+         <children>
+            <Button layoutX="6.0" layoutY="1.0" mnemonicParsing="false" onAction="#backToSend" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #ddd; -fx-background-radius: 100%;" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arimo" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="13.0" layoutX="17.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/back-icon.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="9.0" radius="3.5" width="7.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Back to Send Message" />
+               </tooltip>
+            </Button>
+            <Label layoutX="121.0" layoutY="7.0" text="View Messages" textFill="WHITE">
+               <font>
+                  <Font name="Arimo" size="23.0" />
+               </font>
+            </Label>
+            <Button id="no-color" fx:id="closeButton" cancelButton="true" layoutX="371.0" mnemonicParsing="false" onAction="#closeButtonAction" onMouseEntered="#hover_in" onMouseExited="#hover_out" prefHeight="23.0" prefWidth="27.0" style="-fx-background-color: transparent;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView id="close-button" fitHeight="26.0" fitWidth="21.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" styleClass="no-margin">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../img/PopupClose.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="210.0" prefWidth="409.0" BorderPane.alignment="CENTER">
+        <content>
+            <VBox id="messageContent" fx:id="messageContent" alignment="TOP_CENTER" prefHeight="197.0" prefWidth="403.0" spacing="7.0">
+               <padding>
+                  <Insets left="5.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+        </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,7 @@
+flyway-7.7.0/
+build/
+dist/
+.vscode/
+kite-installer
+.fake
+.ionide

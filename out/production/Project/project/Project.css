@@ -1,0 +1,56 @@
+.button, .registration_page_buttons{
+    -fx-background-radius: 0;
+    -fx-background-color: #666;
+    -fx-text-fill: white;
+    -fx-padding: 0;
+    -fx-pref-height: 40px;
+}
+.registration_page_buttons{
+	-fx-pref-height:35px;
+}
+.button:hover, .mainpagebutton:hover,#upload:hover, .registration_page_buttons:hover{
+	-fx-text-fill: #666;
+	-fx-background-color:  #DDD;
+        -fx-cursor:hand;
+}
+.registration_page_buttons:hover, #upload:hover{
+        -fx-border-color: #666;
+}
+.registration_page_label{
+	-fx-background-color: transparent;
+	-fx-text-fill: #007BA0;
+}
+.loginPane{
+    -fx-background-image: url("../img/login-image.jpg");
+    -fx-background-color: #888;
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 0 0.8em;
+}
+#container, .registration_modules{
+	-fx-border-width: 2px;
+	-fx-border-color: black;
+	-fx-border-radius: 5px;
+	-fx-border-color: #666;
+}
+.textField, .combo_box, .password_field{
+	-fx-pref-height: 35px;
+	-fx-font-size: 14px;
+    	-fx-background-radius: 0;
+}
+.textarea{
+    -fx-background-radius: 0;
+    -fx-text-fill: #bbb;
+}
+#upload{
+    -fx-pref-width: 100;
+    -fx-pref-height: 30;
+    -fx-background-color:  #666;
+}
+#no-color{
+	-fx-background-color: transparent;
+	-fx-effect: null;
+}
+#no-color:hover{
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 10, 0.0 , 0 , 0 );
+}

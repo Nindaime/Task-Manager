@@ -1,0 +1,10 @@
+.combo-box-popup .list-view .list-cell:hover, .message-content:hover{
+    -fx-background-color: #ddd;
+    -fx-cursor: hand;
+}
+.combo-box-popup .list-view .list-cell{
+	-fx-padding: 4;
+	-fx-background-color: white; 
+	-fx-alignment: center;
+}
+

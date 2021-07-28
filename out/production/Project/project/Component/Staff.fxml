@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="pane" layoutX="10.0" layoutY="38.0" maxWidth="-Infinity" onMouseClicked="#selectUser" prefHeight="56.0" prefWidth="391.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fx:id="imageView" fitHeight="34.0" fitWidth="34.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image fx:id="userImage" url="@../img/placeholder.gif" />
+            </image>
+        </ImageView>
+        <Label fx:id="username" layoutX="11.0" layoutY="38.0" text="" />
+        <Label fx:id="name" layoutX="83.0" layoutY="11.0" text="">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Label>
+        <Label fx:id="jobTitle" layoutX="287.0" layoutY="10.0" text="" />
+    </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</Pane>

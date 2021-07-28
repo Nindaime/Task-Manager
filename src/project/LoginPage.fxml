@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" onMouseDragged="#pick" onMousePressed="#determine" onMouseReleased="#drop" prefHeight="560.0" prefWidth="815.0" styleClass="loginPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.LoginPageController">
+    <stylesheets>
+        <URL value="@Project.css" />
+    </stylesheets>
+   <children>
+      <VBox id="container" layoutX="508.0" layoutY="142.0" prefHeight="344.0" prefWidth="279.0" spacing="20.0" styleClass="container">
+         <children>
+            <TextField fx:id="username" prefHeight="25.0" prefWidth="271.0" promptText="Username" styleClass="textField" stylesheets="@Project.css">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <PasswordField fx:id="password" promptText="Password" styleClass="textField">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="warning" alignment="CENTER" contentDisplay="RIGHT" opacity="0.0" prefHeight="39.0" prefWidth="255.0" text="wrong username or password" textFill="RED">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="-6.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/warning.fw.png" />
+                     </image></ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Regular" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow color="RED" />
+               </effect>
+            </Label>
+            <HBox prefHeight="67.0" prefWidth="255.0" spacing="10.0">
+               <children>
+                  <Button fx:id="login" alignment="BASELINE_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#authenticate" prefHeight="48.0" prefWidth="119.0" styleClass="loginbutton" stylesheets="@Project.css" text="LOGIN">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="318.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" styleClass="no-margin">
+                           <image>
+                              <Image url="@../img/log-in.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="register" alignment="BASELINE_CENTER" contentDisplay="RIGHT" layoutX="10.0" layoutY="20.0" mnemonicParsing="false" onAction="#goToRegistration" prefHeight="48.0" prefWidth="119.0" styleClass="loginbutton" stylesheets="@Project.css" text="SIGN UP">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="203.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Sign_Up-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="285.0" styleClass="loginbutton" text="FORGOT PASSWORD">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="43.0" layoutX="87.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/android-settings.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <Button id="no-color" fx:id="closeButton" cancelButton="true" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="21.0" prefWidth="28.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView id="close-button" fitHeight="28.0" fitWidth="30.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" styleClass="no-margin">
+               <image>
+                  <Image url="@../img/iconsineed-multiply.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#eeeeee" layoutX="34.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Collaboration Tool for Work Group" textAlignment="CENTER" wrappingWidth="764.744140625">
+         <font>
+            <Font name="Arimo" size="48.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

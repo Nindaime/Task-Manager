@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="messageContent" prefHeight="250.0" prefWidth="409.0" style="-fx-border-width: 3; -fx-border-color: #666;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.ViewSubordinatesController">
+   <top>
+      <Pane prefHeight="40.0" prefWidth="377.0" style="-fx-background-color: #666;">
+         <children>
+            <Label layoutX="121.0" layoutY="7.0" text="View Subordinates" textFill="WHITE">
+               <font>
+                  <Font name="Arimo" size="23.0" />
+               </font>
+            </Label>
+            <Button id="no-color" fx:id="closeButton" cancelButton="true" layoutX="371.0" mnemonicParsing="false" onAction="#closeButtonAction" onMouseEntered="#hover_in" onMouseExited="#hover_out" prefHeight="23.0" prefWidth="27.0" style="-fx-background-color: transparent;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView id="close-button" fitHeight="26.0" fitWidth="21.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" styleClass="no-margin">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../img/PopupClose.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="210.0" prefWidth="409.0" BorderPane.alignment="CENTER">
+         <content>
+            <Pane minHeight="200.0" prefWidth="403.0">
+               <children>
+                  <Label layoutX="104.0" layoutY="6.0" text=" Name" />
+                  <Label layoutX="300.0" layoutY="6.0" text="Job Title" />
+                  <VBox fx:id="displayBox" layoutY="32.0" minHeight="150.0" prefWidth="402.0" />
+                  
+                  
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
